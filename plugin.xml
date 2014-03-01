@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            name="Clean-up Code"
+            id="org.mitratul.plugin.cleanup.commands.cleanupCommand"
+            tooltip="Clean-up configured code"
+            defaultHandler="org.mitratul.plugin.cleanup.handlers.CodeCleanupHandler">
+      </command>
+   </extension>
+
+
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <command
+               commandId="org.mitratul.plugin.cleanup.commands.cleanupCommand"
+               mnemonic="C"
+               id="org.mitratul.plugin.cleanup.popups.codeCleanupCommand">
+         </command>
+      </menuContribution>
+      
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.navigator.ProjectExplorer#PopupMenu">
+         <command
+               commandId="org.mitratul.plugin.cleanup.commands.cleanupCommand"
+               mnemonic="C"
+               id="org.mitratul.plugin.cleanup.popups.codeCleanupCommand">
+         </command>
+      </menuContribution>
+      
+      <!--<menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="org.mitratul.plugin.cleanup.toolbars.codeCleanupToolbar">
+            <command
+                  commandId="org.mitratul.plugin.cleanup.commands.cleanupCommand"
+                  icon="icons/sample.gif"
+                  tooltip="Clean-up configured code"
+                  id="org.mitratul.plugin.cleanup.toolbars.codeCleanupCommand">
+            </command>
+         </toolbar>
+      </menuContribution>-->
+   </extension>
+
+</plugin>
