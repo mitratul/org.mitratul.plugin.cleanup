@@ -75,15 +75,4 @@ public class CodeCleanupHandler extends AbstractHandler {
 			}
 		}
 	}
-
-//	@Override
-//	public Object execute(ExecutionEvent event) throws ExecutionException {
-//		IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);
-//		MessageDialog.openInformation(
-//				window.getShell(),
-//				"Code Clean-up",
-//				"Hello, Eclipse world!\n\n"
-//				+ "I will clean-up your code; wait till I grow up.");
-//		return null;
-//	}
 }
